@@ -3,14 +3,14 @@
 # First deploy: see README for initial setup steps.
 set -e
 
-REPO=/var/www/megaparser
+REPO=/var/www/tgchannel-parser-main
 
 echo "==> Pulling latest code"
 cd $REPO
 git pull
 
 echo "==> Installing Python deps"
-source $REPO/venv/bin/activate
+source $REPO/backend/venv/bin/activate
 pip install -r backend/requirements.txt -q
 
 echo "==> Running migrations"
